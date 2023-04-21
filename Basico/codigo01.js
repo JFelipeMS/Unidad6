@@ -9,7 +9,7 @@ var varhola = 'texto3'
 varhola = 'Hola Mundo '
 var01 = 'JavaScript'
 
-console.log(varhola + var01)
+console.log(varhola + var01)  //aqui uso el operador + como concatenar
 
 //Declaración de constantes
 const PI = 3.1416
@@ -57,3 +57,12 @@ arrayvacio.push('Hola Chicos')
 arrayvacio.push(false)
 console.log(arrayvacio, array01)
 let milista01 = [10, 7, 21, 35, 2]  //lista, porque todos los elementos son del mismo tipo
+
+/* cuando por ejemplo tengo una variable A = 3 y B = A, 
+lo que hago es guardar la referencia de A en B o almaceno el valor de 3? */
+
+var A = 3
+var B = A
+console.log(A, B)
+A = 10
+console.log(A, B) 
