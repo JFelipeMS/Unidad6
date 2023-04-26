@@ -78,3 +78,20 @@ function Fibonacci(N){
     return sucesion
 }
 console.log(Fibonacci(10))
+
+/* Ingresado un numero ‘n’ entero positivo determinar 
+si este es primo o no.*/
+function EsPrimo(N){
+    if(N <= 2) return false
+    var retorno = true
+    for(var i = 2; i < N; i++){
+        if(N % i == 0) {
+            retorno = false
+            break
+        }
+        //console.log(N, i, retorno)
+    }
+    return retorno
+}
+var num = 5
+console.log(EsPrimo(num) ? num + " es Primo" : num + " no es Primo")
