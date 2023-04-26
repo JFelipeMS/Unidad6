@@ -93,5 +93,7 @@ function EsPrimo(N){
     }
     return retorno
 }
+
 var num = 5
 console.log(EsPrimo(num) ? num + " es Primo" : num + " no es Primo")
+
