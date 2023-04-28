@@ -97,3 +97,55 @@ function EsPrimo(N){
 var num = 5
 console.log(EsPrimo(num) ? num + " es Primo" : num + " no es Primo")
 
+/* realizar un script que escriba una piramide del 1 al 30
+1
+22
+333
+4444
+55555
+666666
+7777777
+88888888
+999999999
+1010101010
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+1 2 3 4 5 6
+1 2 3 4 5 6 7
+1 2 3 4 5 6 7 8
+1 2 3 4 5 6 7 8 9
+1 2 3 4 5 6 7 8 9 10
+*/
+function piramide01(N){
+    var cadena = []
+    for(var i = 1; i <= N; i++){
+        cadena.push(i)
+        //console.log(cadena)
+        var texto = ""
+        for(var x in cadena){
+            texto += cadena[x] + " "
+        }
+        console.log(texto)
+    }
+}
+function piramide02(N){
+    var texto = ""
+    for(var i = 1; i <= N; i++){
+        texto += i + " "
+        console.log(texto)
+    }
+}
+function piramide03(N){
+    for(var i = 1; i <= N; i++){
+        var texto = "" 
+        for(var j = 1; j<= i; j++){
+            texto += i
+        }
+        console.log(typeof(texto))
+        console.log(texto.substr(0,i))
+    }
+}
+piramide03(15)
