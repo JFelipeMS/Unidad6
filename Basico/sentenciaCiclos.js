@@ -43,3 +43,12 @@ a = 0 //10  100
 console.log("(for) la sumatoria de numeros hasta ",a, "da: ", funcionFor(a))
 console.log("(while) la sumatoria de numeros hasta ",a, "da: ", funcionWhile(a))
 console.log("(do) la sumatoria de numeros hasta ",a, "da: ", funcionDo(a))
+
+let iterable = "boo";
+
+for (let value of iterable) {
+  console.log(value);
+}
+for (let value in iterable) {
+    console.log(iterable[value]);
+}
