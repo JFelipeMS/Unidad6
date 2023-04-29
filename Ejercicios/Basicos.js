@@ -94,6 +94,17 @@ function EsPrimo(N){
     return retorno
 }
 
+/* Ingresado un numero ‘n’ entero positivo determinar la suma 
+de los primos hasta ese numero */
+function sumaPrimos(N){
+    var suma = 0
+    for (var i = 1; i< N; i++){
+        if (EsPrimo(i)) suma += i
+    }
+}
+
+
+
 var num = 5
 console.log(EsPrimo(num) ? num + " es Primo" : num + " no es Primo")
 

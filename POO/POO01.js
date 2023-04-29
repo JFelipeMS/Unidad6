@@ -1,4 +1,4 @@
-/* esto es un objeto de Javascript que 
+/* esto es un tipo de dato 'objeto' de Javascript que 
 tiene funciones incluidas
 */
 var persona = {
