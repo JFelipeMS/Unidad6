@@ -62,6 +62,30 @@ class Libro extends Recurso{
     }
 }
 
+class Revista extends Recurso{
+    #NumArtículos
+    #Edición
+    getNumArtículos() {return this.#NumArtículos}
+    getEdición() {return this.#Edición}
+    
+    constructor (Titulo, Autores, NumArtículos,Edición){
+        super(Titulo, Autores)
+        this.#NumArtículos= NumArtículos
+        this.#Edición = Edición
+        this._TipoRecurso = "Revista"
+    }
+}
+
+class CD extends Recurso{
+    #Duracion
+    getDuracion() {return this.#Duracion}
+    constructor (Titulo, Autores, Duracion){
+        super(Titulo, Autores)
+        this.#Duracion = Duracion
+        this._TipoRecurso = "CD"
+    }
+}
+
 // creación de autores
 const autor1 = new Autor("Gabriel Garcia Márquez", "Colombiano")
 console.log(autor1.getNombre(), autor1.getNacionalidad())
