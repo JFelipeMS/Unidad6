@@ -42,3 +42,53 @@ detalles se muestren correctamente.
 Llamar al método calcularPago() en cada instancia y verificar que se 
 muestre el mensaje correspondiente a cada tipo de empleado.
 */
+
+class Empleado {
+    _Nombre
+    _Salario
+    constructor(nombre, salario){
+        if (new.target === Empleado) {
+            throw new TypeError('No puedes instanciar una clase abstracta.');
+        }
+        this._Nombre = nombre
+        this._Salario = salario
+    }
+    obtenerDetalles(){
+        console.log("Nombre:", this._Nombre, "Salario: $", this._Salario)
+    }
+
+}
+class Desarrollador extends Empleado{
+    constructor(nombre, salario, lenguaje){
+        super(nombre,salario)
+        this._Lenguaje = lenguaje
+    }
+    obtenerDetalles(){
+        console.log("Nombre:", this._Nombre, "Salario: $", this._Salario,
+        "Lenguaje:", this._Lenguaje)
+    }
+    calcularPago(){
+        console.log("Calculando el pago del Desarrollador", this._Nombre)
+        console.log("Pago al Desarrollador", this._Salario)
+    }
+}
+class Gerente extends Empleado{
+    constructor(nombre, salario, departamento){
+        super(nombre,salario)
+        this._Departamento = departamento
+    }
+    obtenerDetalles(){
+        console.log("Nombre:", this._Nombre, "Salario: $", this._Salario,
+        "Departamento:", this._Departamento)
+    }
+    calcularPago(){
+        console.log("Calculando el pago del Gerente", this._Nombre)
+        console.log("Pago al Gerente", this._Salario)
+    }
+}
+var miDesa01 = new Desarrollador("Andrea", 3000000, "JavaScript")
+miDesa01.obtenerDetalles()
+miDesa01.calcularPago()
+var miGere01 = new Gerente("Karen", 4000000, "BackEnd")
+miGere01.obtenerDetalles()
+miGere01.calcularPago()
