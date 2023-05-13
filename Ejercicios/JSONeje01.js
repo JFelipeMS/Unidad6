@@ -49,4 +49,19 @@ const estudiante = {
 };
 */
 
-const estudiante = '{"nombre": "María","edad": 22,"cursos": [{ "nombre": "Matemáticas", "nota": 90 },{ "nombre": "Historia", "nota": 85 },{ "nombre": "Inglés", "nota": 95 }],"direccion" : {"calle" : "carrera 8a","numero" : "41-56","barrio" : "El Sucre","ciudad" : "Bogotá D.C.",}}';
+const estudiante = '{"nombre": "María","edad": 22,"cursos": [{ "nombre": "Matemáticas", "nota": 90 },{ "nombre": "Historia", "nota": 85 },{ "nombre": "Inglés", "nota": 95 }],"direccion" : {"calle" : "carrera 8a","numero" : "41-56","barrio" : "El Sucre","ciudad" : "Bogotá D.C."}}';
+
+const estudiante01 = JSON.parse(estudiante)
+console.log("Nombre:",estudiante01.nombre)
+console.log("Edad:",estudiante01.edad)
+for (var x in estudiante01.cursos){
+    console.log("Curso:", estudiante01.cursos[x].nombre, "Nota:",
+    estudiante01.cursos[x].nota)
+}
+console.log("Dirección:", estudiante01.direccion.calle,
+estudiante01.direccion.numero)
+console.log("Barrio:",estudiante01.direccion.barrio)
+console.log("Ciudad:",estudiante01.direccion.ciudad)
+
+const estudiante02 = JSON.stringify(estudiante01)
+console.log(estudiante02)
