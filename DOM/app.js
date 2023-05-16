@@ -60,6 +60,9 @@ console.log(enlace)
 const titulo1 = document.createElement("h1")
 titulo1.textContent = "Mi Titulo por JavaScript y DOM"
 document.querySelector("header").appendChild(titulo1)
+const titulo3 = document.createElement("h1")
+titulo3.textContent = "Mi Titulo por JavaScript y DOM"
+document.querySelector("header").appendChild(titulo3)
 
 const titulo2 = document.createElement("h3")
 titulo2.textContent = "Mis Redes Sociales"
@@ -69,3 +72,8 @@ document.querySelector("footer").appendChild(titulo2)
 //titulo2.remove()
 //titulo2.parentElement.removeChild(titulo2)
 document.querySelector("footer").removeChild(titulo2)
+
+//diferencia entre innerHTML e innerText
+console.log(titulo1.innerText)
+titulo1.innerText = "Mi titulo por <em>Javascript</em> y <em>DOM</em>"
+titulo3.innerHTML = "Mi titulo por <em>Javascript</em> y <em>DOM</em>"
