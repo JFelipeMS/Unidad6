@@ -6,7 +6,7 @@ se inició el conteo.
 */
 
 let timerInterval
-let startTime = new Date().getTime()
+let startTime = new Date().getTime() //no la estoy usando realmente
 let tiemporecor = 0
 const textoT = document.getElementById("tiempo")
 const starBtn = document.getElementById("StartBtn")
@@ -30,7 +30,7 @@ function actualizarTiempo(){
     tiemporecor++
     console.log(tiemporecor, 
         Math.floor((new Date().getTime() - startTime)/1000),
-        new Date().getTime().toLocaleString())
+        new Date().getTime().toLocaleString()) //no se esta usando
     const segundos = tiemporecor % 60
     const minutos = Math.floor(tiemporecor/60) % 60
     const horas = Math.floor(tiemporecor/60/60) % 60
